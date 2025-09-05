@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: "DM Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#aparencia {
+    position: relative;
+    color: rgb(52, 159, 209);
+    background-color: rgb(211, 233, 252);
+    width: 70%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 7px 8px 10px rgb(124, 155, 182),
+        -3px 0px 10px rgb(143, 164, 182);
+}
+
+#aparencia:hover {
+    transform: scale(1.02);
+}
+
+#formasPagar {
+    width: 100%;
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    width: 330px;
+    height: 70px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(108, 191, 240);
+    font-size: 20px;
+    color: rgb(25, 37, 43);
+}
+
+button:hover {
+    transform: scale(1.01);
+    box-shadow: 0.5px 0.5px 5px rgb(124, 155, 182),
+        -0.5px 0.5px 5px rgb(143, 164, 182);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 2.9vw;
+}
+
+img {
+    width: 40vw;
+    border-radius: 3px;
+}
+
+a {
+    position: absolute;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(108, 191, 240);
+    height: 70px;
+    width: 70px;
+    text-decoration: none;
+    border-radius: 50%;
+    top: 1%;
+    left: 1%;
+    color: rgb(25, 37, 43);
+}
+
+a:hover {
+    transform: scale(1.01);
+    box-shadow: 0.5px 0.5px 5px rgb(124, 155, 182),
+        -0.5px 0.5px 5px rgb(143, 164, 182);
+}
+
+/* Animação simples */
+
+#formasPagar * {
+    opacity: 0.3;
+    transform: translateY(-700px);
+    animation: aparecer 1.5s ease-in-out forwards;
+}
+
+#formasPagar > a{animation-delay: 0.2s;}
+#formasPagar > h1{animation-delay: 0.4s;}
+#formasPagar > img{animation-delay: 0.6s;}
+#formasPagar > button{animation-delay: 0.8s;}
+#formasPagar > p{animation-delay: 1.5s;}
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0.3;
+        transform: translateY(-700px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@media (width > 918px){
+    img{
+        width: 350px;
+    }
+    #formasPagar {
+    gap:1vw;
+}
+}
